@@ -1,0 +1,489 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 460px;
+}
+
+body {
+    position: relative;
+    width: 420px;
+    margin: 0 auto;
+    min-height: 360px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px;
+    background-color: #323B55;
+}
+
+form > fieldset {
+    border: none;
+    position: relative;
+    height: 65px;
+    padding: 0;
+    margin: 0;
+}
+
+form#login-form fieldset {
+    margin-bottom: 40px;
+}
+
+form#login-form div:nth-child(2), form#login-form div:nth-child(3), form#login-form div:nth-child(4) {
+    margin-top: 20px;
+}
+
+form#login-form div:nth-child(5) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+img#kanbanize-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input,
+textarea,
+select,
+section {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
+select[disabled] {
+    border: none;
+    background-image: none;
+    box-shadow: none;
+    opacity: 0.60;
+}
+
+div#login-form-container,
+div#create-card-form-container,
+div#error-form-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 420px;
+    height: 360px;
+    margin-top: -170px;
+    margin-left: -215px;
+}
+
+form#login-form,
+form#create-card-form,
+form#error-form {
+    position: relative;
+    width: 390px;
+    margin-left: -190px;
+    height: 350px;
+    margin-top: -175px;
+    left: 50%;
+    top: 50%;
+}
+
+form#login-form label {
+    color: blanchedalmond;
+    display: block;
+    height: 20px;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+form#create-card-form label {
+    color: blanchedalmond;
+    display: block;
+    height: 20px;
+    font-size: 1.2em;
+}
+
+.placeholder {
+    color: #444;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"],
+#login-form input[type="text"] {
+    width: 100%;
+    height: 40px;
+    positon: relative;
+    /*margin-top: 7px;*/
+    margin-top: 0px;
+    vertical-align: middle;
+    display: inline-block;
+    /*font-size: 16px;*/
+    font-size: 1.2em;
+    color: #444;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .49);
+    /*padding-left: 20px;*/
+    padding-left: 10px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 3px;
+}
+
+#login-form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 9px;
+    color: #fff;
+    font-size: 18px;
+}
+
+div.create-card-btn-large {
+    position: relative;
+    height: 69px;
+    width: 390px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    bottom: 10px;
+}
+
+#create-card-form input[type="submit"]#create-card-btn {
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 35px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+span#isRequired {
+    position: absolute;
+    bottom: 0;
+    bottom: -55px;
+    right: 0;
+    color: #D4D4D4;
+    font-size: 0.9em;
+    font-family: 'Arial';
+}
+
+span#display-errs {
+    display: block;
+    color: blanchedalmond;
+    height: 15px;
+    margin-top: 10px;
+    padding: 3px;
+    font-size: 1.2em;
+}
+
+span#requiredFields {
+    position: absolute;
+    display: block;
+    color: blanchedalmond;
+    height: 15px;
+    padding: 3px;
+    top: -5px;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+span#requiredFields.smoothHide,
+span#welcomeMessage.smoothHide {
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+span#welcomeMessage {
+    position: absolute;
+    display: block;
+    color: blanchedalmond;
+    height: 15px;
+    padding: 3px;
+    bottom: -15px;
+    font-size: 1.2em;
+    right: 0px;
+    opacity: 1;
+    transition: opacity 1000ms;
+}
+
+boldAndUnderlined {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+div.select-large {
+    position: relative;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.select-large select#boards {
+    width: 100%;
+    position: absolute;
+}
+
+div.select-medium {
+    position: relative;
+    height: 45px;
+}
+
+div.select-medium label:first-child {
+    width: 49%;
+    margin-right: 2%;
+    left: 0;
+}
+
+div.select-medium label:last-of-type {
+    width: 49%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.select-medium select#column {
+    width: 49%;
+    margin-right: 2%;
+    position: absolute;
+    left: 0;
+}
+
+.select-medium select#swimlane {
+    width: 49%;
+    position: absolute;
+    right: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#create-card-fields-container {
+    position: relative;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+div.input-large {
+    padding: 5px;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+input[type="text"]#card-title {
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+input[type="text"]#card-title::-webkit-input-placeholder {
+    /*font-weight: bold;*/
+}
+
+div.textarea-large {
+    padding: 5px;
+    margin: 0;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+textarea#card-description {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 65px;
+    border: none;
+    resize: none;
+    overflow: hidden;
+    display: block;
+}
+
+#card-description-new {
+    resize: none;
+    min-height: 135px;
+    height: 100%;
+    max-height: 135px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+[contenteditable] {
+    font-family: Roboto, sans-serif;
+    padding: 10px;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+[contenteditable] img {
+    width: 100%;
+    height: auto;
+}
+
+[contenteditable][placeholder] {
+    font-family: Roboto, sans-serif;
+}
+
+[contenteditable][placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #9A9A9A;
+}
+
+.form-style input[type="text"],
+.form-style textarea,
+.form-style select,
+.form-style section {
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #444;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+.form-style select {
+    -webkit-appearance: menulist-button;
+    background-color: #e8eeef;
+    height: 25px;
+}
+
+.form-style select:focus {
+    box-shadow: 0 0 3px rgba(81, 203, 238, 1);
+}
+
+a#log-out-link {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+a#cardCreatedLink {
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+.clean-button {
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clean-button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0.5em 1em;
+    color: #444;
+    border: 1px solid #999;
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.clean-button:hover,
+.clean-button:focus {
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.10)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.10));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.10));
+    background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.10));
+}
+
+.clean-button:focus {
+    outline: 0;
+}
+
+.clean-button:active {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.20) inset;
+    border-color: #423838;
+}
+
+.clean-button[disabled],
+.clean-button-disabled:hover,
+.clean-button-disabled:focus,
+.clean-button-disabled:active {
+    border: none;
+    background-image: none;
+    opacity: 0.50;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.clean-button-primary,
+.clean-button-selected,
+a.clean-button-primary,
+a.clean-button-selected {
+    background-color: rgb(44, 177, 125);
+    color: #fff;
+}
+
+form#error-form h1 {
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+form#error-form span#error-header-fake-span {
+    width: 100%;
+    height: 1em;
+    display: inline-block;
+}
+
+form#error-form p {
+    font-size: 1.1em;
+    color: white;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+form#error-form footer p:last-child {
+    margin-top: 20px;
+    font-size: 1.4em;
+}

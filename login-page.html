@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kanbanize Extension</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="helpers/OSdetector-helper.js"></script>
+    <script src="helpers/xss-helper.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <div id="login-form-container">
+        <form id="login-form" name="loginForm" method="POST" autocomplete="off">
+            <fieldset>
+                <img src="icons/k-174.png" id="kanbanize-logo" alt="Kanbanize Logo" />
+                <span id="isRequired">all fields are required*</span>
+            </fieldset>
+            <div class="form-grp">
+                <label for="subdomain">Account Name</label>
+                <input autofocus type="text" id="subdomain" name="subdomain" maxlength="35" />
+            </div>
+            <div class="form-grp">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" maxlength="50" />
+            </div>
+            <div class="form-grp">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" maxlength="50" />
+            </div>
+            <div class="form-grp">
+                <span id="display-errs"></span>
+            </div>
+            <div class="form-grp">
+                <input title="Log me in!" type="submit" class="clean-button clean-button-primary" value="Log In" id="login-btn" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

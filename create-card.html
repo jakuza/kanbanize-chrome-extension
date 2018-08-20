@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html id='htmlz'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kanbanize Extension</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="helpers/OSdetector-helper.js"></script>
+    <script src="helpers/xss-helper.js"></script>
+    <script src="helpers/js-xss.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/create-card-script.js"></script>
+</head>
+
+<body>
+    <div id="create-card-form-container" class="form-style">
+        <form id="create-card-form" name="cardCreate" method="POST" autocomplete="off">
+            <fieldset>
+                <img src="icons/k-174.png" id="kanbanize-logo" alt="Kanbanize Logo">
+                <a id="log-out-link" href="login-page.html">Log out</a>
+                <span id="welcomeMessage"></span>
+            </fieldset>
+            <div id="select-box-container">
+                <div class="select-large select_style form-grp">
+                    <label for="boards">Board</label>
+                    <select id="boards">
+                        <option value="" disabled selected>Loading Available Boards...</option>
+                    </select>
+                    <span></span>
+                </div>
+                <div class="select-medium form-grp">
+                    <label for="column">Column</label>
+                    <select id="column" disabled>
+                        <option value="" disabled selected>Select Column</option>
+                    </select>
+                    <label for="swimlane">Swimlane</label>
+                    <select id="swimlane" disabled>
+                        <option value="" disabled selected>Select Swimlane</option>
+                    </select>
+                </div>
+            </div>
+            <div id="create-card-fields-container">
+                <div class="input-large form-grp">
+                    <input placeholder="*Title" type="text" id="card-title" name="title" maxlength="200" />
+                </div>
+                <div class="textarea-large form-grp">
+                    <section id="card-description-new" contenteditable="true" placeholder="Description" style="height: 80px;"></section>
+                    <!--<textarea autoresize placeholder="Description" id="card-description" name="description" maxlength="4000"></textarea>-->
+                </div>
+            </div>
+            <div class="create-card-btn-large form-grp">
+                <a id="cardCreatedLink" href="#"><span id="requiredFields"></span></a>
+                <input type="submit" value="Create Card" class="clean-button clean-button-primary" id="create-card-btn" name="create-card-btn"></input>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

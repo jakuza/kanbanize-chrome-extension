@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kanbanize Extension</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="helpers/OSdetector-helper.js"></script>
+</head>
+
+<body>
+    <div id="error-form-container">
+        <form id="error-form" name="errorForm" method="POST" autocomplete="off">
+            <fieldset>
+                <a id="log-out-link" href="login-page.html">Log Out</a>
+                <img src="icons/k-174.png" id="kanbanize-logo" alt="Kanbanize Logo" />
+            </fieldset>
+            <div class="form-grp">
+                <h1 id="error-header"><div>Oops... 2FA <strong>NOT</strong> supported!</h1>
+            </div>
+            <div class="form-grp">
+                <p>
+                    Sorry to inform you that 2FA and Kanbanize's Chrome Extension are incompatible for the time being.
+                </p>
+            </div>
+            <div class="form-grp">
+                <p>
+                    If you'd like to login with a different account without 2FA enabled you can log out via the button in the top right corner and try again with a different account.
+                </p>
+                <footer>
+                    <p>
+                        As always, <strong>Happy</strong> Kanbanizing!
+                    </p>
+                </footer>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

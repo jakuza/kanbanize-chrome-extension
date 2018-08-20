@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+
+  "name": "Kanbanize",
+  "description": "This extension allows you to add cards to any of the boards that you are assigned to with just a few clicks, without having to explicitly open them!",
+  "version": "1.0",
+  "minimum_chrome_version": "51",
+  "browser_action": {
+    "default_popup": "login-page.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Ctrl+Shift+K",
+        "windows": "Ctrl+Shift+K",
+        "linux": "Ctrl+Shift+K",
+        "chromeos": "Ctrl+Shift+K"
+      } 
+    }
+  },
+  "icons": {
+    "16": "icons/kanbanize-logo-16.png",
+    "32": "icons/kanbanize-logo-32.png",
+    "48": "icons/kanbanize-logo-48.png",
+    "64": "icons/kanbanize-logo-64.png",
+    "96": "icons/kanbanize-logo-96.png",
+    "128": "icons/kanbanize-logo-128.png"
+  },
+  "background": {
+    "scripts": [
+        "js/background.js"
+    ]
+  },
+  "permissions": [
+    "https://*.kanbanize.com/index.php/api/kanbanize/*",
+    "storage",
+    "contextMenus",
+    "notifications",
+    "activeTab"
+  ]
+  
+}
